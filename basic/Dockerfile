@@ -18,7 +18,9 @@ ENV PATH /opt/conda/bin:$PATH
 RUN conda install -y \
     scikit-learn=0.18 \
     seaborn=0.7
-RUN conda install -y -c conda-forge pydotplus=2.0
+RUN conda install -y -c conda-forge \
+    pydotplus=2.0 \
+    tensorflow=0.12
 COPY ./ /root
 WORKDIR /root/jupyter
 ENTRYPOINT ["sh", "-c", "jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"]
