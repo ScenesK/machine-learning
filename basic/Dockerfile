@@ -20,7 +20,8 @@ RUN conda install -y \
     seaborn=0.7
 RUN conda install -y -c conda-forge \
     pydotplus=2.0 \
-    tensorflow=0.12
+    tensorflow=0.12 \
+ && conda install -c alchayward keras=1.1
 COPY ./ /root
 WORKDIR /root/jupyter
 ENTRYPOINT ["sh", "-c", "jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"]
