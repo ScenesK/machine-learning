@@ -1,19 +1,19 @@
 ## 実行環境
 
-Docker (1.13.0にて動作確認)
+- Docker (1.13.0にて動作確認)
 
 ### Dockerコンテナの構成
 
-OS: ubuntu:16.10
-言語: Python3.5.2
+- OS: ubuntu:16.10
+- 言語: Python3.5.2
 
-Anaconda3-4.1.1
-Chainer1.20
-Keras1.1
-PyDotPlus2.0
-scikit-learn0.18
-Seaborn0.7
-TensorFlow0.12
+- Anaconda3-4.1.1
+- Chainer1.20
+- Keras1.1
+- PyDotPlus2.0
+- scikit-learn0.18
+- Seaborn0.7
+- TensorFlow0.12
 
 ### インストール
 
@@ -37,7 +37,8 @@ Dockerfileのあるディレクトリに移動
 $ cd machine-learning/machine-learning-study
 ```
 
-Dockerコンテナ作成(30分程度かかることがあります)
+Dockerコンテナ作成(30分程度かかることあり)
+
 Windowsの場合は必要に応じて、docker -> docker.exeに読み替え
 
 ```
@@ -57,4 +58,5 @@ $ docker run -p 8888:8888 -it scenesk/mls:0.1
 ```
 
 しばらくして起動したら、ブラウザからlocalhost:8888にアクセス
+
 docker-toolboxを使用している場合は、前のステップで確認しておいたIPに置き換え
