@@ -54,7 +54,7 @@ $ docker-machine ip
 Dockerコンテナ起動
 
 ```
-$ docker run -p 8888:8888 -it scenesk/mls:0.1
+$ docker run -p 8888:8888 -v $(pwd)/jupyter:/root/jupyter -it scenesk/mls:0.1
 ```
 
 しばらくして起動したら、ブラウザからlocalhost:8888にアクセス
