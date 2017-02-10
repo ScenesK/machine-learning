@@ -25,6 +25,9 @@ RUN conda install -qy -c conda-forge \
 RUN conda install -qy -c alchayward keras=1.1
 RUN pip install --upgrade pip \
  && pip install chainer==1.20
+COPY ./.cache /root/.cache
+COPY ./.ipython /root/.ipython
+COPY ./.keras /root/.keras
 VOLUME /root/jupyter
 WORKDIR /root/jupyter
 ENTRYPOINT ["sh", "-c", "jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"]
